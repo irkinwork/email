@@ -14,7 +14,57 @@ var gulp = require('gulp'), // Подключаем Gulp
 	concatCSS = require('gulp-concat-css'),
 	errorHandler = require('gulp-error-handle'),
 	gutil = require('gulp-util'),
+	emailBuilder = require('gulp-email-builder'),
+	replace = require('gulp-replace');
 	autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
+
+	var current_date = new Date().toString(),
+	email_subject = 'Email test',
+	remote_imgs_basepath = 'https://www.mortauxrois.myjino.ru/softgrad/civi/email/img',
+	email_builder_options = {
+		encodeSpecialChars: true,
+
+		emailTest : {
+				// Your Email
+				to: 'irin.work42@gmail.com',
+
+				from: 'irina_n@softgrad.com',
+				// Your email Subject
+				subject : email_subject + ' [' + current_date + ']',
+
+				// Optional
+				nodemailer: {
+					transporter: {
+						service: 'gmail',
+						auth: {
+								user: 'irina.softgrad@gmail.com',
+								pass: '123456qw`'
+						}
+					},
+					defaults: {}
+				}
+		},
+};
+
+gulp.task('email', function() {
+  gulp.src(['./app/index.html'])
+		.pipe(replace('src="./img', 'src="' + remote_imgs_basepath))
+    .pipe(emailBuilder(email_builder_options).build())
+    .pipe(gulp.dest('./dist'));
+});
+
+gulp.task('inline', function() {
+  gulp.src(['./app/index.html'])
+    .pipe(emailBuilder(email_builder_options).inlineCss())
+    .pipe(gulp.dest('./dist'));
+});
+
+gulp.task('replace', function() {
+	gulp.src(['./app/index.html'])
+		.pipe(replace('src="./img', 'src="' + remote_imgs_basepath))
+    .pipe(emailBuilder(email_builder_options).inlineCss())
+    .pipe(gulp.dest('./dist/send'));
+});
 
 const logError = function(err) {
 	gutil.log(err);
