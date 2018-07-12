@@ -15,7 +15,8 @@ var gulp = require('gulp'), // Подключаем Gulp
 	errorHandler = require('gulp-error-handle'),
 	gutil = require('gulp-util'),
 	emailBuilder = require('gulp-email-builder'),
-	replace = require('gulp-replace');
+	replace = require('gulp-replace'),
+	inlineCss = require('gulp-inline-css'),
 	autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
 
 	var current_date = new Date().toString(),
@@ -26,9 +27,9 @@ var gulp = require('gulp'), // Подключаем Gulp
 
 		emailTest : {
 				// Your Email
-				to: 'irin.work42@gmail.com',
+				to: ['irin.work42@gmail.com', 'irina.softgrad@gmail.com'],
 
-				from: 'irina_n@softgrad.com',
+				from: 'irina.softgrad@gmail.com',
 				// Your email Subject
 				subject : email_subject + ' [' + current_date + ']',
 
@@ -46,10 +47,9 @@ var gulp = require('gulp'), // Подключаем Gulp
 		},
 };
 
-gulp.task('email', function() {
-  gulp.src(['./app/index.html'])
-		.pipe(replace('src="./img', 'src="' + remote_imgs_basepath))
-    .pipe(emailBuilder(email_builder_options).build())
+gulp.task('email', ['in'], function() {
+  gulp.src(['./dist/inline/index.html'])
+    .pipe(emailBuilder(email_builder_options).sendEmailTest())
     .pipe(gulp.dest('./dist'));
 });
 
@@ -180,3 +180,16 @@ gulp.task('clear', function (callback) { // кэш чистим
 })
 
 gulp.task('default', ['watch', 'clear']);
+
+
+gulp.task('in', function() {
+	return gulp.src('./app/*.html')
+			.pipe(replace('src="./img', 'src="' + remote_imgs_basepath))
+			.pipe(inlineCss({
+				applyStyleTags: true,
+				applyLinkTags: true,
+				removeStyleTags: false,
+				removeLinkTags: false
+			}))
+			.pipe(gulp.dest('./dist/inline'));
+});
