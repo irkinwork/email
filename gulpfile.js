@@ -59,6 +59,8 @@ gulp.task('inline', function() {
     .pipe(gulp.dest('./dist'));
 });
 
+gulp.task('inliner', ['img','inline']);
+
 gulp.task('replace', function() {
 	gulp.src(['./app/index.html'])
 		.pipe(replace('src="./img', 'src="' + remote_imgs_basepath))
