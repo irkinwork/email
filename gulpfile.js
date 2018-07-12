@@ -20,7 +20,7 @@ var gulp = require('gulp'), // Подключаем Gulp
 
 	var current_date = new Date().toString(),
 	email_subject = 'Email test',
-	remote_imgs_basepath = 'https://www.mortauxrois.myjino.ru/softgrad/civi/email/img',
+	remote_imgs_basepath = 'https://irkinwork.github.io/email/app/img',
 	email_builder_options = {
 		encodeSpecialChars: true,
 
