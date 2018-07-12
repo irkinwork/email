@@ -59,8 +59,7 @@ gulp.task('inline', function() {
     .pipe(gulp.dest('./dist'));
 });
 
-
-gulp.task('inliner', ['inline','img']);
+gulp.task('inliner', ['img','inline']);
 
 gulp.task('replace', function() {
 	gulp.src(['./app/index.html'])
