@@ -11,99 +11,107 @@ html(xmlns='http://www.w3.org/1999/xhtml')
     //if (gte mso 9)|(IE)
       style(type='text/css').
         table {border-collapse: collapse;}
-  body
-    table.mail__header(style="display:table;")
-      tbody.container
-        tr
-          td(width="51%")
-            img(src="./img/logo.png", width="141", height="18")
-          td(width="11%%")
-            img(src="./img/sm/in.png", width="17", height="17")
-          td(width="12.5%%")
-            img(src="./img/sm/ib.png", width="21", height="19")
-          td(width="12.5%%")
-            img(src="./img/sm/fb.png", width="20", height="19")
-          td(width="13%%")
-            img(src="./img/sm/tw.png",width="22", height="18")
-    //- table.mail__hello
-    //-   tbody.container
-    //-     tr
-    //-       td.check(rowspan="2", width="14%")
-    //-         img(src="./img/helpers/success.png", width="54", height="54")
-    //-       td.hola
-    //-         b Hola Holly!
-    //-     tr
-    //-       td.confirm Tu reserva ha quedado cofirmada.
-    //- table.content-wrap(align="center")
-    //-   tbody.container
-    //-     tr
-    //-       td.inner-top
-    //-         table.content-main
-    //-           tr
-    //-             td
-    //-               table.content-top
-    //-                 tr
-    //-                   td.pic(rowspan="4", width="35%")
-    //-                     img(src="./img/pic.png", width="183", height="141")
-    //-                   td.title 
-    //-                     b Vatican Museums, Sistine Chapel & St Peter’s
-    //-                 tr
-    //-                   td.desc Madrid, Spain
-    //-                 tr
-    //-                   td.help(valign="center")
-    //-                     table
-    //-                       tr
-    //-                         td.lang
-    //-                           img(src="./img/helpers/lang.png", width="20", height="20")
-    //-                         td English
-
-    //-                       tr
-    //-                         td.time(valign="center")
-    //-                           img(src="./img/helpers/time.png", width="20", height="20")
-    //-                         td 60hrs
-    //-                 tr
-    //-                 tr.spacer-td
-    //-                   td(colspan="2")
-    //-                     hr.spacer
-    //-               table.content-middle
-    //-                 tr.info
-    //-                   td.gray.left Numero de reserva
-    //-                   td.right 550994
-    //-                 tr.info
-    //-                   td.gray.left Fecha
-    //-                   td.right Sabado, 3 de junio de 2017
-    //-                 tr.info
-    //-                   td.gray.left Hora
-    //-                   td.right 10:00 Horas
-    //-                 tr.info
-    //-                   td.gray.left Numero de personas
-    //-                   td.right 2
-    //-                 tr.spacer-td2
-    //-                   td(colspan="2")
-    //-                     hr.spacer
-    //-                 tr.total
-    //-                   td.total-text
-    //-                     b Precio total
-    //-                     span.gray  (impuestos incluidos)
-    //-                   td.price.right
-    //-                     b €25
-    //-         table.title-inner
-    //-           tr
-    //-             td Datos del proveedor
-    //-         table.content-bottom
-    //-           tr.info
-    //-             td.gray.left Nombre
-    //-             td.right Cultourberlin
-    //-           tr.info
-    //-             td.gray.left Correo electronico
-    //-             td.right.blue reservas@cultourberlin.com
-    //-           tr.info
-    //-             td.gray.left Telefono de emergencia
-    //-             td.right.blue (+49) 177 652 2171
-    //-         table.message
-    //-           tr
-    //-             td En breve recibirás tu comprobante, el cual podrás imprimir o llevarlo en tu móvil o tablet.
-    //- table.footer
-    //-   tbody.container
-    //-     tr
-    //-       td Gracias por confiar en Civitours
+  body(bgcolor="#f7f7f7")
+    .center
+      table.mail__header
+        tbody.container
+          tr
+            td(width="51%")
+              img(src="./img/logo.png", width="141", height="18")
+            td(width="11%%")
+              img(src="./img/sm/in.png", width="17", height="17")
+            td(width="12.5%%")
+              img(src="./img/sm/ib.png", width="21", height="19")
+            td(width="12.5%%")
+              img(src="./img/sm/fb.png", width="20", height="19")
+            td(width="13%%")
+              img(src="./img/sm/tw.png",width="22", height="18")
+      table.mail__hello
+        tbody.container
+          tr
+            td.check(rowspan="2", width="14%")
+              img(src="./img/helpers/success.png", width="54", height="54")
+            td.hola
+              b Hola Holly!
+          tr
+            td.confirm Tu reserva ha quedado cofirmada.
+      table.content-wrap(align="center")
+        tbody.container
+          tr
+            td.inner-top
+              table.content-main(bgcolor="#ffffff")
+                tr
+                  td
+                    table.content-top(width="100%")
+                      tr
+                        td.center
+                          .inline-block(style="max-width: 183px; padding-right: 40px")
+                            table(width="100%")
+                              tr
+                                td.pic(width="205", align="center")
+                                  img(src="./img/pic.png", width="183", height="141")
+                          .inline-block(style="max-width: 296px")
+                            table(width="100%")
+                              tr
+                                td.title(width="296", align="left")
+                                  b Vatican Museums, Sistine Chapel & St Peter’s
+                              tr
+                                td.desc(align="left") Madrid, Spain
+                              tr
+                                td.help(valign="center", align="left", bgcolor="#ffffff")
+                                  table(bgcolor="#ffffff", width="100%", height="100%", align="center")
+                                    tr
+                                      td.lang(valign="center", bgcolor="#ffffff")
+                                        img(src="./img/helpers/lang.png", width="20", height="20")
+                                      td(bgcolor="#ffffff") English
+                                    tr
+                                      td.time(valign="center", bgcolor="#ffffff")
+                                        img(src="./img/helpers/time.png", width="20", height="20")
+                                      td(bgcolor="#ffffff") 60hrs
+                                    tr
+                                      td(colspan="2")
+                      tr.spacer-td
+                        td(colspan="2")
+                          hr.spacer
+                    table.content-middle
+                      tr.info
+                        td.gray.left Numero de reserva
+                        td.right 550994
+                      tr.info
+                        td.gray.left Fecha
+                        td.right Sabado, 3 de junio de 2017
+                      tr.info
+                        td.gray.left Hora
+                        td.right 10:00 Horas
+                      tr.info
+                        td.gray.left Numero de personas
+                        td.right 2
+                      tr.spacer-td2
+                        td(colspan="2")
+                          hr.spacer
+                      tr.total
+                        td.total-text
+                          b Precio total
+                          span.gray  (impuestos incluidos)
+                        td.price.right
+                          b €25
+              table.title-inner
+                tr
+                  td Datos del proveedor
+              table.content-bottom(bgcolor="#fff")
+                tr.info
+                  td.gray.left Nombre
+                  td.right Cultourberlin
+                tr.info
+                  td.gray.left Correo electronico
+                  td.right.blue reservas@cultourberlin.com
+                tr.info
+                  td.gray.left Telefono de emergencia
+                  td.right.blue (+49) 177 652 2171
+              table.message
+                tr
+                  td En breve recibirás tu comprobante, el cual podrás imprimir o llevarlo en tu móvil o tablet.
+      table.footer
+        tbody.container
+          tr
+            td Gracias por confiar en Civitours

@@ -2,30 +2,22 @@
 body
     margin 0 !important
     padding 0
-    background-color #ffffff
+    background-color #f7f7f7
     width:100%
     margin: 0 auto
     background: #F7F7F7
     font-family: Arial;
     box-sizing: border-box
 
-table
-    border-spacing 0
-    font-family sans-serif
-    color #333333
-    width:100%
-
 img
     border 0
-    max-width 100%
 
 .wrapper
     width 100%
-    table-layout fixed
-    -webkit-text-size-adjust 100%
-    -ms-text-size-adjust 100%
     margin: 0 auto
 
+table
+  //width 100%
 .container
   max-width 600px
   width 100%
@@ -36,20 +28,24 @@ generate-grid(end)
   for x in 1..end
     .col-{x}
       width ((x*100)/end)+'%';
-      padding 0 2.5%;
+      padding 0 15px;
 
 generate-grid(12)
 
 
 /***===========================common start==========================**/
+.center
+  margin: 0 auto
+  text-align: center
+  // max-width: 600px;
 .content-wrap
-  padding 30px 2.5% 11px
+  padding 30px 15px 11px
 
 .spacer-table
   background-color: #ffffff
 
   td
-    padding-left: (22/6)+'%'
+    padding-left: 22px
   td.pic
     padding-left: 0
 
@@ -73,24 +69,30 @@ generate-grid(12)
 .blue
   color #0086E6  
 
+.inline-block
+  display inline-block
+  vertical-align: top;
+  width: 100%; 
 /**========================common end=========================***/
 /**========================header start=========================***/
 .mail
   &__header
     background-color: #0086E6
-    padding: 20px 2.5%;
+    padding: 0 15px;
+    width: 100%
     td
-      padding 0 2.5%
+      padding 20px 15px
 /**========================header end=========================***/
 /**========================hello start=========================***/
 .mail
   &__hello
-    padding: 10px 2.5%;
+    padding: 10px 15px;
     background-color: #ffffff
     box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+    width: 100%
     td
       &.check
-        padding 0 2.5%
+        padding 0 15px
       &.hola
         padding: 8px 0.5% 0
         letter-spacing: 1px;
@@ -103,23 +105,27 @@ generate-grid(12)
 
 /**========================content-main start=========================***/
 .inner-top
-  padding 0px 2.5%
+  padding 0px 15px
 .content-main
   box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
   max-width: 540px;
+  background-color: #ffffff;
+  width 100%
 
 .content-top
-  padding 24px 3.5% 0
+  //padding 24px 21px 0
   background-color: #ffffff
   .pic
-    //padding-right (22/6)+'%'
+    padding-top 24px
+    padding-left: 21px 
     padding-right 0
     width 41%
   .title
     line-height: 18px;
     font-size: 18px;
     letter-spacing: 0.5px;
-    padding: 0 0 0 0;
+    padding-top 24px
+    padding-right: 21px 
   .desc
     color: #000000;
     opacity: 0.3;
@@ -137,7 +143,7 @@ generate-grid(12)
     font-weight: 600;
     .time
       width 23px
-      
+      padding 7px 3px 7px 0
     .lang
       width 23px
       padding 7px 3px 7px 0
@@ -145,8 +151,9 @@ generate-grid(12)
       padding-right (22/6)+'%'
 
 .content-middle
-  padding 0 3.5% 1.8%
+  //padding 0 21px 11px
   background-color: #ffffff
+  width 100%
 .info
   line-height: 38px;
   font-size: 14px;
@@ -157,9 +164,9 @@ generate-grid(12)
   font-size: 18px;
   .price
     color #0086E6
-    padding 0px 0 11px 0
+    padding 0px 21px 11px 0
   .total-text
-    padding 8px 0 20px
+    padding 8px 21px 41px
 
 .title-inner
   max-width: 540px;
@@ -181,10 +188,11 @@ generate-grid(12)
 /**========================content-bottom end=========================***/
 
 .content-bottom
-  padding 15px 3.5%
+  padding 15px 21px
   background-color: #ffffff
   box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
   max-width: 540px;
+  width: 100%
 
 /**========================content-bottom end=========================***/
 
@@ -192,7 +200,7 @@ generate-grid(12)
 /**========================message start=========================***/
 .message
   td
-    padding: 33px (58/6)+'%' 0
+    padding: 33px 58px 0
     line-height: 20px;
     font-size: 14px;
     text-align: center;
@@ -202,6 +210,7 @@ generate-grid(12)
 /**========================footer start=========================***/
 table
   &.footer
+    width: 100%
     background-color: #0086E6
     border: 0.5px solid #FFFFFF;
     td

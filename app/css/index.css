@@ -2,7 +2,7 @@
 body {
   margin: 0 !important;
   padding: 0;
-  background-color: #fff;
+  background-color: #f7f7f7;
   width: 100%;
   margin: 0 auto;
   background: #f7f7f7;
@@ -10,21 +10,11 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-table {
-  border-spacing: 0;
-  font-family: sans-serif;
-  color: #333;
-  width: 100%;
-}
 img {
   border: 0;
-  max-width: 100%;
 }
 .wrapper {
   width: 100%;
-  table-layout: fixed;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
   margin: 0 auto;
 }
 .container {
@@ -35,61 +25,65 @@ img {
 }
 .col-1 {
   width: 8.333333333333334%;
-  padding: 0 2.5%;
+  padding: 0 15px;
 }
 .col-2 {
   width: 16.666666666666668%;
-  padding: 0 2.5%;
+  padding: 0 15px;
 }
 .col-3 {
   width: 25%;
-  padding: 0 2.5%;
+  padding: 0 15px;
 }
 .col-4 {
   width: 33.333333333333336%;
-  padding: 0 2.5%;
+  padding: 0 15px;
 }
 .col-5 {
   width: 41.666666666666664%;
-  padding: 0 2.5%;
+  padding: 0 15px;
 }
 .col-6 {
   width: 50%;
-  padding: 0 2.5%;
+  padding: 0 15px;
 }
 .col-7 {
   width: 58.333333333333336%;
-  padding: 0 2.5%;
+  padding: 0 15px;
 }
 .col-8 {
   width: 66.66666666666667%;
-  padding: 0 2.5%;
+  padding: 0 15px;
 }
 .col-9 {
   width: 75%;
-  padding: 0 2.5%;
+  padding: 0 15px;
 }
 .col-10 {
   width: 83.33333333333333%;
-  padding: 0 2.5%;
+  padding: 0 15px;
 }
 .col-11 {
   width: 91.66666666666667%;
-  padding: 0 2.5%;
+  padding: 0 15px;
 }
 .col-12 {
   width: 100%;
-  padding: 0 2.5%;
+  padding: 0 15px;
 }
 /***===========================common start==========================**/
+.center {
+  margin: 0 auto;
+  text-align: center;
+}
 .content-wrap {
-  padding: 30px 2.5% 11px;
+  padding: 30px 15px 11px;
 }
 .spacer-table {
   background-color: #fff;
 }
 .spacer-table td {
-  padding-left: 3.666666666666667%;
+  padding-left: 22px;
 }
 .spacer-table td.pic {
   padding-left: 0;
@@ -115,25 +109,32 @@ img {
 .blue {
   color: #0086e6;
 }
+.inline-block {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}
 /**========================common end=========================***/
 /**========================header start=========================***/
 .mail__header {
   background-color: #0086e6;
-  padding: 20px 2.5%;
+  padding: 0 15px;
+  width: 100%;
 }
 .mail__header td {
-  padding: 0 2.5%;
+  padding: 20px 15px;
 }
 /**========================header end=========================***/
 /**========================hello start=========================***/
 .mail__hello {
-  padding: 10px 2.5%;
+  padding: 10px 15px;
   background-color: #fff;
   -webkit-box-shadow: 0px 4px 25px rgba(0,0,0,0.1);
           box-shadow: 0px 4px 25px rgba(0,0,0,0.1);
+  width: 100%;
 }
 .mail__hello td.check {
-  padding: 0 2.5%;
+  padding: 0 15px;
 }
 .mail__hello td.hola {
   padding: 8px 0.5% 0;
@@ -148,25 +149,30 @@ img {
 /**========================hello end=========================***/
 /**========================content-main start=========================***/
 .inner-top {
-  padding: 0px 5%;
+  padding: 0px 15px;
 }
 .content-main {
   -webkit-box-shadow: 0px 4px 25px rgba(0,0,0,0.1);
           box-shadow: 0px 4px 25px rgba(0,0,0,0.1);
+  max-width: 540px;
+  background-color: #fff;
+  width: 100%;
 }
 .content-top {
-  padding: 24px 3.5% 0;
   background-color: #fff;
 }
 .content-top .pic {
-  padding-right: 3.666666666666667%;
+  padding-top: 24px;
+  padding-left: 21px;
+  padding-right: 0;
   width: 41%;
 }
 .content-top .title {
   line-height: 18px;
   font-size: 18px;
   letter-spacing: 0.5px;
-  padding: 0 0 0 0;
+  padding-top: 24px;
+  padding-right: 21px;
 }
 .content-top .desc {
   color: #000;
@@ -187,6 +193,7 @@ img {
 }
 .content-top .help .time {
   width: 23px;
+  padding: 7px 3px 7px 0;
 }
 .content-top .help .lang {
   width: 23px;
@@ -196,8 +203,8 @@ img {
   padding-right: 3.666666666666667%;
 }
 .content-middle {
-  padding: 0 3.5% 1.8%;
   background-color: #fff;
+  width: 100%;
 }
 .info {
   line-height: 38px;
@@ -211,10 +218,13 @@ img {
 }
 .total .price {
   color: #0086e6;
-  padding: 0px 0 11px 0;
+  padding: 0px 21px 11px 0;
 }
 .total .total-text {
-  padding: 8px 0 20px;
+  padding: 8px 21px 41px;
+}
+.title-inner {
+  max-width: 540px;
 }
 .title-inner td {
   padding: 46px 0 17px;
@@ -225,19 +235,22 @@ img {
 /**========================title-inner start=========================***/
 .title-inner {
   background-color: transparent;
+  max-width: 540px;
 }
 /**========================title-inner end=========================***/
 /**========================content-bottom end=========================***/
 .content-bottom {
-  padding: 15px 3.5%;
+  padding: 15px 21px;
   background-color: #fff;
   -webkit-box-shadow: 0px 4px 25px rgba(0,0,0,0.1);
           box-shadow: 0px 4px 25px rgba(0,0,0,0.1);
+  max-width: 540px;
+  width: 100%;
 }
 /**========================content-bottom end=========================***/
 /**========================message start=========================***/
 .message td {
-  padding: 33px 9.666666666666666% 0;
+  padding: 33px 58px 0;
   line-height: 20px;
   font-size: 14px;
   text-align: center;
@@ -245,6 +258,7 @@ img {
 /**========================message end=========================***/
 /**========================footer start=========================***/
 table.footer {
+  width: 100%;
   background-color: #0086e6;
   border: 0.5px solid #fff;
 }

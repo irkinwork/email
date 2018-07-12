@@ -50,7 +50,12 @@ var gulp = require('gulp'), // Подключаем Gulp
 gulp.task('email', ['in'], function() {
   gulp.src(['./dist/inline/index.html'])
     .pipe(emailBuilder(email_builder_options).sendEmailTest())
-    .pipe(gulp.dest('./dist'));
+		.pipe(gulp.dest('./dist/inline'));
+});
+
+gulp.task('send', function() {
+  gulp.src(['./dist/custom/index.html'])
+    .pipe(emailBuilder(email_builder_options).sendEmailTest())
 });
 
 gulp.task('inline', function() {
@@ -107,7 +112,7 @@ gulp.task('concat-css', function() {
 	return gulp.src(['./app/css/*.css','!app/css/bundle.min.css', '!./app/css/**/libs.min.css']) // Выбираем файл для минификации, исключаем bundle.min.css
 		.pipe(errorHandler(logError))
 		.pipe(concatCSS('bundle.min.css'))
-		.pipe(cssnano()) // Сжимаем
+		// .pipe(cssnano()) // Сжимаем
 		.pipe(gulp.dest('./app/css')) // Выгружаем в папку app/css
 });
 
@@ -188,8 +193,8 @@ gulp.task('in', function() {
 			.pipe(inlineCss({
 				applyStyleTags: true,
 				applyLinkTags: true,
-				removeStyleTags: false,
-				removeLinkTags: false
+				removeStyleTags: true,
+				removeLinkTags: true
 			}))
 			.pipe(gulp.dest('./dist/inline'));
 });
