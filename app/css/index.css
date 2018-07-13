@@ -77,7 +77,7 @@ img {
   text-align: center;
 }
 .content-wrap {
-  padding: 27px 15px 11px;
+  padding: 27px 15px 6px;
 }
 .spacer-table {
   background-color: #fff;
@@ -282,7 +282,7 @@ table.footer {
   border: 0.5px solid #fff;
 }
 table.footer td {
-  line-height: 23px;
+  line-height: 14px;
   font-size: 16px;
   color: #fff;
   text-align: center;

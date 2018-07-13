@@ -95,7 +95,7 @@ img {
 }
 
 .content-wrap {
-  padding: 27px 15px 11px;
+  padding: 27px 15px 6px;
 }
 
 .spacer-table {
@@ -358,7 +358,7 @@ table.footer {
 }
 
 table.footer td {
-  line-height: 23px;
+  line-height: 14px;
   font-size: 16px;
   color: #fff;
   text-align: center;
