@@ -39,7 +39,7 @@ var gulp = require('gulp'), // Подключаем Gulp
 						service: 'gmail',
 						auth: {
 								user: 'irina.softgrad@gmail.com',
-								pass: '123456qw`'
+								pass: '123456qw*'
 						}
 					},
 					defaults: {}
