@@ -150,6 +150,7 @@ img {
 /**========================content-main start=========================***/
 .inner-top {
   padding: 0px 2px;
+  Margin: 0 auto;
 }
 .content-main {
   -webkit-box-shadow: 0px 4px 25px rgba(0,0,0,0.1);
