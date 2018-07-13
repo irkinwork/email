@@ -39,7 +39,7 @@ generate-grid(12)
   text-align: center
   // max-width: 600px;
 .content-wrap
-  padding 30px 15px 11px
+  padding 27px 15px 11px
 
 .spacer-table
   background-color: #ffffff
@@ -57,7 +57,7 @@ generate-grid(12)
 
 .spacer-td
   td
-    padding 14px 0 4px
+    padding 0px 17px 2px
 .spacer-td2
   td
     padding 7px 0 11px
@@ -78,34 +78,40 @@ generate-grid(12)
 .mail
   &__header
     background-color: #0086E6
-    padding: 0 15px;
+    //padding: 0 15px;
     width: 100%
     td
-      padding 20px 15px
+      .container
+        td
+          //padding 20px 15px
+          &.logo
+            padding-right: 143px;
+            padding-left: 0;
+            padding-top: 13px;
+            padding-bottom: 14px;
 /**========================header end=========================***/
 /**========================hello start=========================***/
 .mail
   &__hello
-    padding: 10px 15px;
+    //padding: 10px 15px;
     background-color: #ffffff
     box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
     width: 100%
     td
       &.check
-        padding 0 15px
+        padding 3px 1px
       &.hola
-        padding: 8px 0.5% 0
+        padding: 12px 15px 0
         letter-spacing: 1px;
         line-height: 12px;
       &.confirm
-        line-height: 20px;
         font-size: 14px;
-        padding: 0px 0.5% 0
+        padding: 0px 15px 4px
 /**========================hello end=========================***/
 
 /**========================content-main start=========================***/
 .inner-top
-  padding 0px 15px
+  padding 0px 2px
 .content-main
   box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
   max-width: 540px;
@@ -116,16 +122,17 @@ generate-grid(12)
   //padding 24px 21px 0
   background-color: #ffffff
   .pic
-    padding-top 24px
-    padding-left: 21px 
+    padding-top: 17px;
+    padding-left: 3px;
     padding-right 0
     width 41%
   .title
     line-height: 18px;
     font-size: 18px;
     letter-spacing: 0.5px;
-    padding-top 24px
-    padding-right: 21px 
+    padding-top 20px
+    padding-right: 21px
+    padding-bottom: 8px;
   .desc
     color: #000000;
     opacity: 0.3;
@@ -143,10 +150,10 @@ generate-grid(12)
     font-weight: 600;
     .time
       width 23px
-      padding 7px 3px 7px 0
+      padding 3px 0px 3px 0
     .lang
       width 23px
-      padding 7px 3px 7px 0
+      padding 14px 0px 7px 0
     img 
       padding-right (22/6)+'%'
 
@@ -155,23 +162,27 @@ generate-grid(12)
   background-color: #ffffff
   width 100%
 .info
-  line-height: 38px;
+  line-height: 36px;
   font-size: 14px;
   text-align: left;
   color: #000000;
+  .left
+    padding-left: 17px;
+  .right
+    padding-right: 14px;
 .total
   line-height: 25px;
   font-size: 18px;
   .price
     color #0086E6
-    padding 0px 21px 11px 0
+    padding 5px 15px 23px 2px
   .total-text
-    padding 8px 21px 41px
+    padding 5px 21px 23px 2px
 
 .title-inner
   max-width: 540px;
   td
-    padding: 46px 0 17px
+    padding: 46px 0 14px
     line-height: 25px;
     font-size: 18px;
 
@@ -188,22 +199,31 @@ generate-grid(12)
 /**========================content-bottom end=========================***/
 
 .content-bottom
-  padding 15px 21px
+  //padding 15px 21px
   background-color: #ffffff
   box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
   max-width: 540px;
   width: 100%
-
+  .info
+    line-height: 15px;
+    .left
+      padding 25px 0 0px 21px
+    .right
+      padding: 25px 17px 0px 0
+    &:last-child
+      td
+        padding-bottom: 20px;
 /**========================content-bottom end=========================***/
 
 
 /**========================message start=========================***/
 .message
   td
-    padding: 33px 58px 0
+    padding: 33px 46px 0
     line-height: 20px;
     font-size: 14px;
     text-align: center;
+    letter-spacing: 0.02em;
 
 /**========================message end=========================***/
 
