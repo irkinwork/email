@@ -21,15 +21,15 @@ var gulp = require('gulp'), // Подключаем Gulp
 
 	var current_date = new Date().toString(),
 	email_subject = 'Email test',
-	remote_imgs_basepath = '***************',
+	remote_imgs_basepath = 'https://irkinwork.github.io/email/app/img',
 	email_builder_options = {
 		encodeSpecialChars: true,
 
 		emailTest : {
 				// Your Email
-				to: ['******', '**********'],
+				to: ['test1.softgrad@icloud.com'],
 
-				from: '********************',
+				from: 'irina.softgrad@gmail.com',
 				// Your email Subject
 				subject : email_subject + ' [' + current_date + ']',
 
@@ -38,8 +38,8 @@ var gulp = require('gulp'), // Подключаем Gulp
 					transporter: {
 						service: 'gmail',
 						auth: {
-								user: '*************',
-								pass: '*************`'
+								user: 'irina.softgrad@gmail.com',
+								pass: '********'
 						}
 					},
 					defaults: {}
@@ -50,6 +50,7 @@ var gulp = require('gulp'), // Подключаем Gulp
 gulp.task('email', ['in'], function() {
   gulp.src(['./dist/inline/index.html'])
     .pipe(emailBuilder(email_builder_options).sendEmailTest())
+		.pipe(gulp.dest('./'))
 		.pipe(gulp.dest('./dist/inline'));
 });
 
@@ -63,6 +64,8 @@ gulp.task('inline', function() {
     .pipe(emailBuilder(email_builder_options).inlineCss())
     .pipe(gulp.dest('./dist'));
 });
+
+gulp.task('inliner', ['img','inline']);
 
 gulp.task('replace', function() {
 	gulp.src(['./app/index.html'])
@@ -196,5 +199,6 @@ gulp.task('in', function() {
 				removeStyleTags: true,
 				removeLinkTags: true
 			}))
+			.pipe(gulp.dest('./'))
 			.pipe(gulp.dest('./dist/inline'));
 });

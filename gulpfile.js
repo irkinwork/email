@@ -27,7 +27,7 @@ var gulp = require('gulp'), // Подключаем Gulp
 
 		emailTest : {
 				// Your Email
-				to: ['irin.work42@gmail.com', 'irina.softgrad@gmail.com'],
+				to: ['test1.softgrad@icloud.com'],
 
 				from: 'irina.softgrad@gmail.com',
 				// Your email Subject
@@ -39,7 +39,7 @@ var gulp = require('gulp'), // Подключаем Gulp
 						service: 'gmail',
 						auth: {
 								user: 'irina.softgrad@gmail.com',
-								pass: '123456qw*'
+								pass: '*8q*[o]Re'
 						}
 					},
 					defaults: {}
@@ -50,6 +50,7 @@ var gulp = require('gulp'), // Подключаем Gulp
 gulp.task('email', ['in'], function() {
   gulp.src(['./dist/inline/index.html'])
     .pipe(emailBuilder(email_builder_options).sendEmailTest())
+		.pipe(gulp.dest('./'))
 		.pipe(gulp.dest('./dist/inline'));
 });
 
@@ -198,5 +199,6 @@ gulp.task('in', function() {
 				removeStyleTags: true,
 				removeLinkTags: true
 			}))
+			.pipe(gulp.dest('./'))
 			.pipe(gulp.dest('./dist/inline'));
 });
