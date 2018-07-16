@@ -2,54 +2,74 @@
 body
     margin 0 !important
     padding 0
-    background-color #ffffff
+    background-color #f7f7f7
     width:100%
     margin: 0 auto
     background: #F7F7F7
     font-family: Arial;
     box-sizing: border-box
 
-table
-    border-spacing 0
-    font-family sans-serif
-    color #333333
-    width:100%
-
 img
     border 0
-    max-width 100%
+    overflow: hidden;
+.wrapper
+    width 100%
+    margin: 0 auto
+td
+  padding 0
+  Margin 0
+  vertical-align: middle;
+table
+  border-spacing: 0;
+  font-family sans-serif
+
+div[style*="margin&:16px0"]
+    margin 0 !important
 
 .wrapper
     width 100%
     table-layout fixed
     -webkit-text-size-adjust 100%
     -ms-text-size-adjust 100%
-    margin: 0 auto
+
+.webkit
+    max-width 600px
+    margin 0 auto
 
 .container
   max-width 600px
   width 100%
   margin 0 auto
   display: table;
+  &--header
+    table
+      padding: 0 5%;
+  &--hello
+    .inner-table
+      padding: 0 5%
 
 generate-grid(end)
   for x in 1..end
     .col-{x}
       width ((x*100)/end)+'%';
-      padding 0 2.5%;
+      padding 0 15px;
 
 generate-grid(12)
 
 
 /***===========================common start==========================**/
+.center
+  margin: 0 auto
+  text-align: center
+  // max-width: 600px;
 .content-wrap
-  padding 30px 2.5% 11px
+  padding 32px 15px 11px
 
 .spacer-table
   background-color: #ffffff
 
   td
-    padding-left: (22/6)+'%'
+    padding-left: 22px
   td.pic
     padding-left: 0
 
@@ -60,11 +80,9 @@ generate-grid(12)
   margin 0
 
 .spacer-td
-  td
-    padding 14px 0 4px
+  padding 11px 23px 17px
 .spacer-td2
-  td
-    padding 7px 0 11px
+  padding 0px 23px 16px
 .gray
   opacity: 0.3;
 .right
@@ -73,53 +91,69 @@ generate-grid(12)
 .blue
   color #0086E6  
 
+.inline-block
+  display inline-block
+  vertical-align: top;
+  width: 100%; 
 /**========================common end=========================***/
 /**========================header start=========================***/
 .mail
   &__header
     background-color: #0086E6
-    padding: 20px 2.5%;
+    //padding: 0 15px;
+    width: 100%
     td
-      padding 0 2.5%
+      .container
+        td
+          //padding 20px 15px
+          &.logo
+            padding 20px 0
 /**========================header end=========================***/
 /**========================hello start=========================***/
 .mail
   &__hello
-    padding: 10px 2.5%;
+    //padding: 10px 15px;
     background-color: #ffffff
     box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+    width: 100%
     td
       &.check
-        padding 0 2.5%
+        padding: 10px 0;
       &.hola
-        padding: 8px 0.5% 0
+        padding: 10px 0 0
         letter-spacing: 1px;
         line-height: 12px;
       &.confirm
-        line-height: 20px;
         font-size: 14px;
-        padding: 0px 0.5% 0
+        padding: 4px 0 2px 0
+        Margin: 0;
 /**========================hello end=========================***/
 
 /**========================content-main start=========================***/
 .inner-top
-  padding 0px 2.5%
+  padding 0px 2px
+  Margin: 0 auto;
 .content-main
   box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
   max-width: 540px;
+  background-color: #ffffff;
+  width 100%
 
 .content-top
-  padding 24px 3.5% 0
+  //padding 24px 21px 0
   background-color: #ffffff
   .pic
-    //padding-right (22/6)+'%'
+    padding-top: 24px;
+    //padding-left: 3px;
     padding-right 0
     width 41%
   .title
-    line-height: 18px;
+    line-height: 22px;
     font-size: 18px;
     letter-spacing: 0.5px;
-    padding: 0 0 0 0;
+    padding-top: 26px;
+    padding-right: 0;
+    padding-bottom: 4px;
   .desc
     color: #000000;
     opacity: 0.3;
@@ -137,29 +171,44 @@ generate-grid(12)
     font-weight: 600;
     .time
       width 23px
-      
+      padding 3px 3px 3px 0
+      & + td
+        padding: 6px 0 7px 0px;
     .lang
       width 23px
-      padding 7px 3px 7px 0
+      padding 20px 3px 7px 0
+      & + td
+        padding: 16px 0 7px 0px;
+        letter-spacing: -1px;
     img 
       padding-right (22/6)+'%'
 
 .content-middle
-  padding 0 3.5% 1.8%
+  //padding 0 21px 11px
   background-color: #ffffff
+  width 100%
 .info
-  line-height: 38px;
+  //line-height: 39px;
   font-size: 14px;
   text-align: left;
   color: #000000;
+  td
+    padding-bottom: 24px;
+  &:nth-child(4)
+    td
+      padding-bottom: 17px;
+  .left
+    padding-left: 25px;
+  .right
+    padding-right: 17px;
 .total
   line-height: 25px;
   font-size: 18px;
   .price
     color #0086E6
-    padding 0px 0 11px 0
+    padding 5px 18px 29px 2px
   .total-text
-    padding 8px 0 20px
+    padding 0px 21px 23px 23px
 
 .title-inner
   max-width: 540px;
@@ -181,19 +230,33 @@ generate-grid(12)
 /**========================content-bottom end=========================***/
 
 .content-bottom
-  padding 15px 3.5%
+  //padding 15px 0 12px
   background-color: #ffffff
   box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
   max-width: 540px;
-
+  width: 100%
+  .info
+    td
+      padding-bottom 23px
+      line-height: normal;
+    .left
+      padding 0 0 23px 21px
+    .right
+      padding: 0 17px 23px 0
+    &:first-child
+      td
+        padding-top: 30px
+    &:last-child
+      td
+        padding-bottom: 25px
 /**========================content-bottom end=========================***/
 
 
 /**========================message start=========================***/
 .message
   td
-    padding: 33px (58/6)+'%' 0
-    line-height: 20px;
+    //padding: 33px 42px 10px 59px
+    padding: 33px 10% 10px
     font-size: 14px;
     text-align: center;
 
@@ -202,16 +265,16 @@ generate-grid(12)
 /**========================footer start=========================***/
 table
   &.footer
+    width: 100%
     background-color: #0086E6
     border: 0.5px solid #FFFFFF;
     td
-      line-height: 23px;
+      line-height: 14px;
       font-size: 16px;
       color: #FFFFFF;
       text-align: center
-      padding 19px 0
+      padding 23px 0
       font-weight: 500
-      letter-spacing: 0.05em;
 
 
 /**========================footer end=========================***/

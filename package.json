@@ -34,6 +34,7 @@
     "bower": "^1.8.4",
     "del": "^3.0.0",
     "gulp-email-builder": "^3.0.0",
+    "gulp-inline-css": "^3.3.0",
     "gulp-replace": "^1.0.0",
     "npm": "^6.0.1",
     "save-dev": "^2.0.0"

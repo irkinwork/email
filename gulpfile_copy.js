@@ -21,15 +21,15 @@ var gulp = require('gulp'), // Подключаем Gulp
 
 	var current_date = new Date().toString(),
 	email_subject = 'Email test',
-	remote_imgs_basepath = 'https://irkinwork.github.io/email/app/img',
+	remote_imgs_basepath = '***************',
 	email_builder_options = {
 		encodeSpecialChars: true,
 
 		emailTest : {
 				// Your Email
-				to: ['irin.work42@gmail.com', 'irina.softgrad@gmail.com'],
+				to: ['******', '**********'],
 
-				from: 'irina.softgrad@gmail.com',
+				from: '********************',
 				// Your email Subject
 				subject : email_subject + ' [' + current_date + ']',
 
@@ -38,8 +38,8 @@ var gulp = require('gulp'), // Подключаем Gulp
 					transporter: {
 						service: 'gmail',
 						auth: {
-								user: 'irina.softgrad@gmail.com',
-								pass: '123456qw*'
+								user: '*************',
+								pass: '*************`'
 						}
 					},
 					defaults: {}
@@ -63,8 +63,6 @@ gulp.task('inline', function() {
     .pipe(emailBuilder(email_builder_options).inlineCss())
     .pipe(gulp.dest('./dist'));
 });
-
-gulp.task('inliner', ['img','inline']);
 
 gulp.task('replace', function() {
 	gulp.src(['./app/index.html'])
