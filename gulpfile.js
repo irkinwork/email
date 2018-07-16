@@ -27,7 +27,7 @@ var gulp = require('gulp'), // Подключаем Gulp
 
 		emailTest : {
 				// Your Email
-				to: ['irin.work42@gmail.com', 'irina.softgrad@gmail.com', 'test1@softgrad.com'],
+				to: ['irin.work42@gmail.com', 'irina.softgrad@gmail.com'],
 
 				from: 'irina.softgrad@gmail.com',
 				// Your email Subject

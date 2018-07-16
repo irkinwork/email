@@ -15,7 +15,9 @@ img
 .wrapper
     width 100%
     margin: 0 auto
-
+td
+  padding 0
+  Margin 0
 table
   border-spacing: 0;
   font-family sans-serif
@@ -42,8 +44,8 @@ div[style*="margin&:16px0"]
     table
       padding: 0 5%;
   &--hello
-    table
-      padding: 10px 5% 11px
+    .inner-table
+      padding: 10px 5%
 
 generate-grid(end)
   for x in 1..end
@@ -116,8 +118,8 @@ generate-grid(12)
     box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
     width: 100%
     td
-      &.check
-        padding 0 21px 0 0
+      // &.check
+      //   padding 0 21px 0 0
       &.hola
         padding: 10px 0 0
         letter-spacing: 1px;
