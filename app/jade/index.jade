@@ -98,81 +98,106 @@ html(xmlns='http://www.w3.org/1999/xhtml')
       </table>
       <![endif]-->
       table.content-wrap(align="center", width="100%", cellpadding="0" cellspacing="0" border="0", style="padding-top:27px;" )
-        tbody.container(align="center")
           tr
             td.inner-top
-              table.content-main(bgcolor="#ffffff")
-                tr
-                  td
-                    table.content-top(width="100%")
-                      tr
-                        td.center
-                          .inline-block(style="max-width: 183px;padding-right:0px")
-                            table(width="100%")
-                              tr
-                                td.pic(width="205", align="center")
-                                  img(src="./img/pic.png", width="183", height="141")
-                          .inline-block(style="max-width: 260px;padding-left: 22px")
-                            table(width="100%")
-                              tr
-                                td.title(width="296", align="left")
-                                  b Vatican Museums, Sistine Chapel & St Peter’s
-                              tr
-                                td.desc(align="left") Madrid, Spain
-                              tr
-                                td.help(valign="center", align="left", bgcolor="#ffffff")
-                                  table(bgcolor="#ffffff", width="100%", height="100%", align="center")
-                                    tr
-                                      td.lang(valign="center", bgcolor="#ffffff")
-                                        img(src="./img/helpers/lang.png", width="20", height="20")
-                                      td(bgcolor="#ffffff") English
-                                    tr
-                                      td.time(valign="center", bgcolor="#ffffff")
-                                        img(src="./img/helpers/time.png", width="20", height="20")
-                                      td(bgcolor="#ffffff") 60hrs
-                                    tr
-                                      td(colspan="2")
-                      tr.spacer-td
-                        td(colspan="2")
-                          hr.spacer
-                    table.content-middle
-                      tr.info
-                        td.gray.left Numero de reserva
-                        td.right 550994
-                      tr.info
-                        td.gray.left Fecha
-                        td.right Sabado, 3 de junio de 2017
-                      tr.info
-                        td.gray.left Hora
-                        td.right 10:00 Horas
-                      tr.info
-                        td.gray.left Numero de personas
-                        td.right 2
-                      tr.spacer-td2
-                        td(colspan="2")
-                          hr.spacer
-                      tr.total
-                        td.total-text
-                          b Precio total
-                          span.gray  (impuestos incluidos)
-                        td.price.right
-                          b €25
-              table.title-inner
-                tr
-                  td Datos del proveedor
-              table.content-bottom(bgcolor="#fff")
-                tr.info
-                  td.gray.left Nombre
-                  td.right Cultourberlin
-                tr.info
-                  td.gray.left Correo electronico
-                  td.right.blue reservas@cultourberlin.com
-                tr.info
-                  td.gray.left Telefono de emergencia
-                  td.right.blue (+49) 177 652 2171
-              table.message
-                tr
-                  td En breve recibirás tu comprobante, el cual podrás imprimir o llevarlo en tu móvil o tablet.
+              <!--[if (gte mso 9)|(IE)]>
+              <table width="540" cellpadding="0" cellspacing="0" border="0" align="center" style="">
+              <tr>
+              <td>
+              <![endif]-->
+              .container(style="max-width: 540px;")
+                table.content-main(bgcolor="#ffffff")
+                  tr
+                    td
+                      table.content-top(width="100%")
+                        tr
+                          td.center
+                            <!--[if (gte mso 9)|(IE)]>
+                            <table width="100%" cellpadding="0" cellspacing="0" border="0" align="center">
+                            <tr>
+                            <td width="205">
+                            <![endif]-->
+                            .inline-block(style="max-width: 183px;padding-right:0px")
+                              table(width="100%")
+                                tr
+                                  td.pic(width="205", align="center")
+                                    img(src="./img/pic.png", width="183", height="141")
+                            <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                            <td width="260">
+                            <![endif]-->
+                            .inline-block(style="max-width: 260px;padding-left: 22px")
+                              table(width="100%")
+                                tr
+                                  td.title(width="296", align="left")
+                                    b Vatican Museums, Sistine Chapel & St Peter’s
+                                tr
+                                  td.desc(align="left") Madrid, Spain
+                                tr
+                                  td.help(valign="center", align="left", bgcolor="#ffffff")
+                                    table(bgcolor="#ffffff", width="100%", height="100%", align="center")
+                                      tr
+                                        td.lang(valign="center", bgcolor="#ffffff")
+                                          img(src="./img/helpers/lang.png", width="20", height="20")
+                                        td(bgcolor="#ffffff") English
+                                      tr
+                                        td.time(valign="center", bgcolor="#ffffff")
+                                          img(src="./img/helpers/time.png", width="20", height="20")
+                                        td(bgcolor="#ffffff") 60hrs
+                                      tr
+                                        td(colspan="2")
+                            <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                            </tr>
+                            </table>
+                            <![endif]-->
+                        tr.spacer-td
+                          td(colspan="2")
+                            hr.spacer
+                      table.content-middle
+                        tr.info
+                          td.gray.left Numero de reserva
+                          td.right 550994
+                        tr.info
+                          td.gray.left Fecha
+                          td.right Sabado, 3 de junio de 2017
+                        tr.info
+                          td.gray.left Hora
+                          td.right 10:00 Horas
+                        tr.info
+                          td.gray.left Numero de personas
+                          td.right 2
+                        tr.spacer-td2
+                          td(colspan="2")
+                            hr.spacer
+                        tr.total
+                          td.total-text
+                            b Precio total
+                            span.gray  (impuestos incluidos)
+                          td.price.right
+                            b €25
+                table.title-inner
+                  tr
+                    td Datos del proveedor
+                table.content-bottom(bgcolor="#fff")
+                  tr.info
+                    td.gray.left Nombre
+                    td.right Cultourberlin
+                  tr.info
+                    td.gray.left Correo electronico
+                    td.right.blue reservas@cultourberlin.com
+                  tr.info
+                    td.gray.left Telefono de emergencia
+                    td.right.blue (+49) 177 652 2171
+                table.message
+                  tr
+                    td En breve recibirás tu comprobante, el cual podrás imprimir o llevarlo en tu móvil o tablet.
+              <!--[if (gte mso 9)|(IE)]>
+              </td>
+              </tr>
+              </table>
+              <![endif]-->
+
       table.footer
         tbody.container
           tr
