@@ -242,7 +242,6 @@ div[style*="margin:16px0"] {
 
 .content-top .pic {
   padding-top: 24px;
-  padding-left: 3px;
   padding-right: 0;
   width: 41%;
 }
@@ -277,7 +276,7 @@ div[style*="margin:16px0"] {
 
 .content-top .help .time {
   width: 23px;
-  padding: 3px 0px 3px 0;
+  padding: 3px 3px 3px 0;
 }
 
 .content-top .help .time + td {
@@ -286,7 +285,7 @@ div[style*="margin:16px0"] {
 
 .content-top .help .lang {
   width: 23px;
-  padding: 20px 0px 7px 0;
+  padding: 20px 3px 7px 0;
 }
 
 .content-top .help .lang + td {
