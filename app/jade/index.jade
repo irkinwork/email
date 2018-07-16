@@ -97,7 +97,7 @@ html(xmlns='http://www.w3.org/1999/xhtml')
       </tr>
       </table>
       <![endif]-->
-      table.content-wrap(align="center", width="100%", cellpadding="0" cellspacing="0" border="0", style="padding-top:27px;" )
+      table.content-wrap(align="center", width="100%", cellpadding="0" cellspacing="0" border="0", style="padding-top:32px;" )
           tr
             td.inner-top
               <!--[if (gte mso 9)|(IE)]>
@@ -117,7 +117,7 @@ html(xmlns='http://www.w3.org/1999/xhtml')
                             <tr>
                             <td width="205">
                             <![endif]-->
-                            .inline-block(style="max-width: 183px;padding-right:0px")
+                            .inline-block(style="max-width: 183px;padding; 0")
                               table(width="100%")
                                 tr
                                   td.pic(width="205", align="center")
@@ -126,7 +126,7 @@ html(xmlns='http://www.w3.org/1999/xhtml')
                             </td>
                             <td width="260">
                             <![endif]-->
-                            .inline-block(style="max-width: 260px;padding-left: 22px")
+                            .inline-block(style="max-width: 260px;padding:0 27px")
                               table(width="100%")
                                 tr
                                   td.title(width="296", align="left")
@@ -151,8 +151,8 @@ html(xmlns='http://www.w3.org/1999/xhtml')
                             </tr>
                             </table>
                             <![endif]-->
-                        tr.spacer-td
-                          td(colspan="2")
+                        tr
+                          td.spacer-td(colspan="2")
                             hr.spacer
                       table.content-middle
                         tr.info
@@ -167,19 +167,19 @@ html(xmlns='http://www.w3.org/1999/xhtml')
                         tr.info
                           td.gray.left Numero de personas
                           td.right 2
-                        tr.spacer-td2
-                          td(colspan="2")
+                        tr
+                          td.spacer-td2(colspan="2")
                             hr.spacer
                         tr.total
-                          td.total-text
+                          td.total-text(align="left")
                             b Precio total
                             span.gray  (impuestos incluidos)
-                          td.price.right
+                          td.price.right(align="right")
                             b €25
                 table.title-inner
                   tr
                     td Datos del proveedor
-                table.content-bottom(bgcolor="#fff")
+                table.content-bottom(bgcolor="#fff" valign="middle")
                   tr.info
                     td.gray.left Nombre
                     td.right Cultourberlin

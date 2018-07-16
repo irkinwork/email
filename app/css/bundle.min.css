@@ -24,6 +24,7 @@ img {
 td {
   padding: 0;
   Margin: 0;
+  vertical-align: middle;
 }
 
 table {
@@ -130,7 +131,7 @@ div[style*="margin:16px0"] {
 }
 
 .content-wrap {
-  padding: 27px 15px 6px;
+  padding: 32px 15px 11px;
 }
 
 .spacer-table {
@@ -152,12 +153,12 @@ div[style*="margin:16px0"] {
   margin: 0;
 }
 
-.spacer-td td {
-  padding: 0px 17px 2px;
+.spacer-td {
+  padding: 11px 23px 17px;
 }
 
-.spacer-td2 td {
-  padding: 7px 0 11px;
+.spacer-td2 {
+  padding: 0px 23px 16px;
 }
 
 .gray {
@@ -188,7 +189,7 @@ div[style*="margin:16px0"] {
 }
 
 .mail__header td .container td.logo {
-  padding: 19px 0;
+  padding: 20px 0;
 }
 
 /**========================header end=========================***/
@@ -240,19 +241,19 @@ div[style*="margin:16px0"] {
 }
 
 .content-top .pic {
-  padding-top: 17px;
+  padding-top: 24px;
   padding-left: 3px;
   padding-right: 0;
   width: 41%;
 }
 
 .content-top .title {
-  line-height: 18px;
+  line-height: 22px;
   font-size: 18px;
   letter-spacing: 0.5px;
-  padding-top: 20px;
-  padding-right: 21px;
-  padding-bottom: 8px;
+  padding-top: 26px;
+  padding-right: 0;
+  padding-bottom: 4px;
 }
 
 .content-top .desc {
@@ -279,9 +280,18 @@ div[style*="margin:16px0"] {
   padding: 3px 0px 3px 0;
 }
 
+.content-top .help .time + td {
+  padding: 6px 0 7px 0px;
+}
+
 .content-top .help .lang {
   width: 23px;
-  padding: 14px 0px 7px 0;
+  padding: 20px 0px 7px 0;
+}
+
+.content-top .help .lang + td {
+  padding: 16px 0 7px 0px;
+  letter-spacing: -1px;
 }
 
 .content-top .help img {
@@ -294,18 +304,25 @@ div[style*="margin:16px0"] {
 }
 
 .info {
-  line-height: 36px;
   font-size: 14px;
   text-align: left;
   color: #000;
 }
 
+.info td {
+  padding-bottom: 24px;
+}
+
+.info:nth-child(4) td {
+  padding-bottom: 17px;
+}
+
 .info .left {
-  padding-left: 17px;
+  padding-left: 25px;
 }
 
 .info .right {
-  padding-right: 14px;
+  padding-right: 17px;
 }
 
 .total {
@@ -315,11 +332,11 @@ div[style*="margin:16px0"] {
 
 .total .price {
   color: #0086e6;
-  padding: 5px 15px 23px 2px;
+  padding: 5px 18px 29px 2px;
 }
 
 .total .total-text {
-  padding: 5px 21px 23px 2px;
+  padding: 0px 21px 23px 23px;
 }
 
 .title-inner {
@@ -327,7 +344,7 @@ div[style*="margin:16px0"] {
 }
 
 .title-inner td {
-  padding: 46px 0 14px;
+  padding: 46px 0 17px;
   line-height: 25px;
   font-size: 18px;
 }
@@ -353,20 +370,25 @@ div[style*="margin:16px0"] {
   width: 100%;
 }
 
-.content-bottom .info {
-  line-height: 15px;
+.content-bottom .info td {
+  padding-bottom: 23px;
+  line-height: normal;
 }
 
 .content-bottom .info .left {
-  padding: 25px 0 0px 21px;
+  padding: 0 0 23px 21px;
 }
 
 .content-bottom .info .right {
-  padding: 25px 17px 0px 0;
+  padding: 0 17px 23px 0;
+}
+
+.content-bottom .info:first-child td {
+  padding-top: 30px;
 }
 
 .content-bottom .info:last-child td {
-  padding-bottom: 20px;
+  padding-bottom: 25px;
 }
 
 /**========================content-bottom end=========================***/
@@ -374,11 +396,9 @@ div[style*="margin:16px0"] {
 /**========================message start=========================***/
 
 .message td {
-  padding: 33px 46px 0;
-  line-height: 20px;
+  padding: 33px 10% 10px;
   font-size: 14px;
   text-align: center;
-  letter-spacing: 0.02em;
 }
 
 /**========================message end=========================***/
@@ -396,9 +416,8 @@ table.footer td {
   font-size: 16px;
   color: #fff;
   text-align: center;
-  padding: 19px 0;
+  padding: 23px 0;
   font-weight: 500;
-  letter-spacing: 0.05em;
 }
 
 /**========================footer end=========================***/
