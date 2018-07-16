@@ -59,7 +59,7 @@ div[style*="margin:16px0"] {
 }
 
 .container--hello .inner-table {
-  padding: 10px 5%;
+  padding: 0 5%;
 }
 
 .col-1 {
@@ -200,6 +200,10 @@ div[style*="margin:16px0"] {
   -webkit-box-shadow: 0px 4px 25px rgba(0,0,0,0.1);
   box-shadow: 0px 4px 25px rgba(0,0,0,0.1);
   width: 100%;
+}
+
+.mail__hello td.check {
+  padding: 10px 0;
 }
 
 .mail__hello td.hola {
