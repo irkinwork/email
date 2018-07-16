@@ -12,9 +12,27 @@ body {
 }
 img {
   border: 0;
+  overflow: hidden;
 }
 .wrapper {
   width: 100%;
+  margin: 0 auto;
+}
+table {
+  border-spacing: 0;
+  font-family: sans-serif;
+}
+div[style*="margin:16px0"] {
+  margin: 0 !important;
+}
+.wrapper {
+  width: 100%;
+  table-layout: fixed;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+.webkit {
+  max-width: 600px;
   margin: 0 auto;
 }
 .container {
@@ -22,6 +40,12 @@ img {
   width: 100%;
   margin: 0 auto;
   display: table;
+}
+.container--header table {
+  padding: 0 5%;
+}
+.container--hello table {
+  padding: 10px 5% 11px;
 }
 .col-1 {
   width: 8.333333333333334%;
@@ -121,10 +145,7 @@ img {
   width: 100%;
 }
 .mail__header td .container td.logo {
-  padding-right: 0;
-  padding-left: 0;
-  padding-top: 13px;
-  padding-bottom: 14px;
+  padding: 19px 0;
 }
 /**========================header end=========================***/
 /**========================hello start=========================***/
@@ -135,16 +156,17 @@ img {
   width: 100%;
 }
 .mail__hello td.check {
-  padding: 3px 1px;
+  padding: 0 21px 0 0;
 }
 .mail__hello td.hola {
-  padding: 12px 15px 0;
+  padding: 10px 0 0;
   letter-spacing: 1px;
   line-height: 12px;
 }
 .mail__hello td.confirm {
   font-size: 14px;
-  padding: 0px 15px 4px;
+  padding: 4px 0 2px 0;
+  Margin: 0;
 }
 /**========================hello end=========================***/
 /**========================content-main start=========================***/

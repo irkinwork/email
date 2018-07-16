@@ -11,18 +11,39 @@ body
 
 img
     border 0
-
+    overflow: hidden;
 .wrapper
     width 100%
     margin: 0 auto
 
 table
-  //width 100%
+  border-spacing: 0;
+  font-family sans-serif
+
+div[style*="margin&:16px0"]
+    margin 0 !important
+
+.wrapper
+    width 100%
+    table-layout fixed
+    -webkit-text-size-adjust 100%
+    -ms-text-size-adjust 100%
+
+.webkit
+    max-width 600px
+    margin 0 auto
+
 .container
   max-width 600px
   width 100%
   margin 0 auto
   display: table;
+  &--header
+    table
+      padding: 0 5%;
+  &--hello
+    table
+      padding: 10px 5% 11px
 
 generate-grid(end)
   for x in 1..end
@@ -85,10 +106,7 @@ generate-grid(12)
         td
           //padding 20px 15px
           &.logo
-            padding-right: 0;
-            padding-left: 0;
-            padding-top: 13px;
-            padding-bottom: 14px;
+            padding 19px 0
 /**========================header end=========================***/
 /**========================hello start=========================***/
 .mail
@@ -99,14 +117,15 @@ generate-grid(12)
     width: 100%
     td
       &.check
-        padding 3px 1px
+        padding 0 21px 0 0
       &.hola
-        padding: 12px 15px 0
+        padding: 10px 0 0
         letter-spacing: 1px;
         line-height: 12px;
       &.confirm
         font-size: 14px;
-        padding: 0px 15px 4px
+        padding: 4px 0 2px 0
+        Margin: 0;
 /**========================hello end=========================***/
 
 /**========================content-main start=========================***/

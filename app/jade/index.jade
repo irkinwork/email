@@ -16,33 +16,54 @@ html(xmlns='http://www.w3.org/1999/xhtml')
       table.mail__header
         tr
           td
-            .container.center
+            <!--[if (gte mso 9)|(IE)]>
+            <table width="600" align="center" style="padding: 0 30px">
+            <tr>
+            <td>
+            <![endif]-->
+            .container.center.container--header
               table(width="100%")
                 tr
-                  td.logo(width="51%", align="left")
+                  td.logo(width="57.5%", align="left", style="width:57.5%")
                     img(src="./img/logo.png", width="141", height="18")
-                  td(width="11%%")
+                  td(width="12.5%", align="left", style="width:12%")
                     img(src="./img/sm/in.png", width="17", height="17")
-                  td(width="12.5%%")
+                  td(width="14%", align="left", style="width:13%")
                     img(src="./img/sm/ib.png", width="21", height="19")
-                  td(width="12.5%%")
+                  td(width="10%", align="left", style="width:12%")
                     img(src="./img/sm/fb.png", width="20", height="19")
-                  td(width="13%%")
+                  td(width="11%", align="right", style="width:5.5%")
                     img(src="./img/sm/tw.png",width="22", height="18")
+            <!--[if (gte mso 9)|(IE)]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
       table.mail__hello
         tr
           td
-            .container.center
-              table
+            <!--[if (gte mso 9)|(IE)]>
+            <table width="600" align="center" style="padding: 0 30px">
+            <tr>
+            <td>
+            <![endif]-->
+            .container.center.container--hello
+              table(width="100%", bgcolor="#ffffff", align="center")
                 tr
-                  td.check(rowspan="2", width="14%")
+                  td.check(rowspan="2", width="54")
                     img(src="./img/helpers/success.png", width="54", height="54")
-                  td.hola(align="left")
+                  td.hola(align="left", bgcolor="#ffffff")
                     b Hola Holly!
                 tr
-                  td.confirm(align="left") Tu reserva ha quedado cofirmada.
+                  td.confirm(align="left", bgcolor="red") Tu reserva ha quedado cofirmada.
+            <!--[if (gte mso 9)|(IE)]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+
       table.content-wrap(align="center")
-        tbody.container
+        tbody.container(align="center")
           tr
             td.inner-top
               table.content-main(bgcolor="#ffffff")
